@@ -48,3 +48,15 @@ Join our community of developers creating universal apps.
 
 - [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
 - [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+
+## Setup to add Vital SDK
+
+- Created project with standard expo creation: `npx create-expo-app@latest vital-expo-example`
+- Copy in `.node-version` and `.nvmrc` to set a default node version to use.
+- Verify native code can build with `npx expo run:android` (set a package name).
+- Downgrade to expo 50 since vital fails to run with expo 51. Re-verify native apps build/run.
+- Add the vital libraries (with patches for now since they don't work with expo).
+  - Requires `patch-package` package for patches and `expo-build-properties` package for setting minimum SDK versions for iOS / Android.
+- Add permissions, min app version configs, and vital expo plugin configs to app.json.
+- Add a new tab for vital with buttons to sign in and request permissions
+- Add the signing and permission request functionality the buttons can use.
