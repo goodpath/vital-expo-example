@@ -74,3 +74,14 @@ where `YOUR_VITAL_API_KEY` is your API key and `YOUR_VITAL_USER_ID` is a user ID
 changed as desired, but sandbox and us is assumed for the example.
 
 - NOTE: This uses the API key signing flow to simplify the example (no backend server). Real apps should use the vital sign in token.
+
+## Running native builds
+
+First you need to install node dependencies with `npm install`.
+
+Then you can run the native builds with either:
+
+- Android: `npm run android -- -d`
+- iOS: `npm run ios -- -d`
+
+These will prompt for the device to install and run on. You must have native tools installed to perform the builds (e.g., cocoapods / xcode for iOS and android studio / java 17 for android).
