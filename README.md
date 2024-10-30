@@ -60,3 +60,17 @@ Join our community of developers creating universal apps.
 - Add permissions, min app version configs, and vital expo plugin configs to app.json.
 - Add a new tab for vital with buttons to sign in and request permissions
 - Add the signing and permission request functionality the buttons can use.
+
+The app expects a `.env` file that looks like the following:
+
+```
+EXPO_PUBLIC_VITAL_API_KEY=YOUR_VITAL_API_KEY
+EXPO_PUBLIC_VITAL_ENVIRONMENT=sandbox
+EXPO_PUBLIC_VITAL_COUNTRY=us
+EXPO_PUBLIC_VITAL_USER_ID=YOUR_VITAL_USER_ID
+```
+
+where `YOUR_VITAL_API_KEY` is your API key and `YOUR_VITAL_USER_ID` is a user ID of an existing user. The country and environment can be
+changed as desired, but sandbox and us is assumed for the example.
+
+- NOTE: This uses the API key signing flow to simplify the example (no backend server). Real apps should use the vital sign in token.
