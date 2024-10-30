@@ -20,7 +20,14 @@
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.goodpath.vitalexpoexample"
+      "package": "com.goodpath.vitalexpoexample",
+      "permissions": [
+        "android.permission.FOREGROUND_SERVICE",
+        "android.permission.READ_EXERCISE",
+        "android.permission.READ_STEPS",
+        "android.permission.READ_DISTANCE",
+        "android.permission.READ_SPEED"
+      ]
     },
     "web": {
       "bundler": "metro",
@@ -28,7 +35,27 @@
       "favicon": "./assets/images/favicon.png"
     },
     "plugins": [
-      "expo-router"
+      "expo-router",
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "compileSdkVersion": 34,
+            "targetSdkVersion": 34,
+            "minSdkVersion": 26
+          },
+          "ios": {
+            "deploymentTarget": "14.0"
+          }
+        }
+      ],
+      "@tryvital/vital-core-react-native",
+      [
+        "@tryvital/vital-health-react-native",
+        {
+          "healthSharePermission": "Allow $(PRODUCT_NAME) to read your exercise information to allow tracking your exercise progress."
+        }
+      ]
     ],
     "experiments": {
       "typedRoutes": true
