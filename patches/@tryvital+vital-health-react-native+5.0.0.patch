@@ -1,6 +1,6 @@
 diff --git a/node_modules/@tryvital/vital-health-react-native/app.plugin.js b/node_modules/@tryvital/vital-health-react-native/app.plugin.js
 new file mode 100644
-index 0000000..4caf408
+index 0000000..a79200b
 --- /dev/null
 +++ b/node_modules/@tryvital/vital-health-react-native/app.plugin.js
 @@ -0,0 +1,55 @@
@@ -59,4 +59,3 @@ index 0000000..4caf408
 +
 +module.exports = (config) =>
 +  withPlugins(config, [[withHealthKit], [withHealthConnect]]);
-\ No newline at end of file
